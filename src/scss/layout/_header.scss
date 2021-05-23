@@ -1,5 +1,11 @@
 .page__header {
   display: flex;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
   margin-bottom: 3rem;
+}
+.title {
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: left;
 }

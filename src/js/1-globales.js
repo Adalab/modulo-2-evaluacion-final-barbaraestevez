@@ -3,11 +3,9 @@
 console.log(">> Ready :)");
 
 const seriesList = document.querySelector(".js-series-list");
-
-// -------------------------
-// para el fetch
-// http://api.tvmaze.com
-// -------------------------
+const btn = document.querySelector(".js-formButton");
+const form = document.querySelector(".js-form");
+const containerSeries = document.querySelector(".js-series-list");
 
 // -------------------------
 // ejemplo de un objeto del array de series

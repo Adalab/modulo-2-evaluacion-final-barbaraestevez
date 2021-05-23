@@ -1,15 +1,14 @@
 <main class="page__main">
-  <h1 class="title">Buscador de series</h1>
-  <form action="#">
+  <form action="#" class="form js-form">
     <input
-      class="js-search"
+      class="form__search js-formSearch"
       type="text"
       name="search"
       id="search"
-      placeholder=""
+      placeholder="Ej.: Game of Thrones"
     />
     <input
-      class="js-button"
+      class="form__button js-formButton"
       type="button"
       name="button"
       id="button"
@@ -17,10 +16,11 @@
     />
   </form>
 
-  <ul class="series__list js-series-list">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+  <div class="container__series-list">
+    <ul class="series__list js-series-list"></ul>
+    <div class="fav__container">
+      <h3 class="favourites">Mis series favoritas</h3>
+      <ul class="fav__list js-fav-list"></ul>
+    </div>
+  </div>
 </main>
