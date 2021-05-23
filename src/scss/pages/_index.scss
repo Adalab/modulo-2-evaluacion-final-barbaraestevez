@@ -2,3 +2,22 @@
   padding-left: 2rem;
   padding-bottom: 20px;
 }
+.item__photo-each {
+  width: auto;
+  height: auto;
+  background-color: rgb(137, 176, 210);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box-pics {
+  width: 100px;
+  height: 150px;
+  margin-bottom: 15px;
+}
+.pics {
+  width: 90px;
+  height: 140px;
+  margin-bottom: 15px;
+}
