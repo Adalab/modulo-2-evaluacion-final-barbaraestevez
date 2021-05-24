@@ -1,11 +1,12 @@
 <main class="page__main">
   <form action="#" class="form js-form">
     <input
-      class="form__search js-formSearch"
+      class="form__input-search js-formSearch"
       type="text"
       name="search"
       id="search"
-      placeholder="Ej.: Game of Thrones"
+      value=""
+      placeholder="Ej.: Girls"
     />
     <input
       class="form__button js-formButton"
@@ -17,10 +18,27 @@
   </form>
 
   <div class="container__series-list">
-    <ul class="series__list js-series-list"></ul>
     <div class="fav__container">
-      <h3 class="favourites">Mis series favoritas</h3>
-      <ul class="fav__list js-fav-list"></ul>
+      <h2 class="favourites">Mis series favoritas</h2>
+      <ul class="fav__list js-fav-list">
+        <li>Fav 1</li>
+        <li>Fav 2</li>
+        <li>Fav 3</li>
+      </ul>
     </div>
+    <ul class="series__list js-series-list">
+      Cargando series...
+      <li>
+        <div class="box-pics">
+          <img
+            class="pics"
+            src="https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg"
+            alt="Girls"
+          />Girls
+        </div>
+      </li>
+      <li></li>
+      <li></li>
+    </ul>
   </div>
 </main>
