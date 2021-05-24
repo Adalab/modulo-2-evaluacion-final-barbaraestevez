@@ -1,6 +1,9 @@
-.form__input-search {
+body {
+  background-color: #ffbbec;
+}
+.form__search {
   width: 150px;
-  height: 26px;
+  height: 24px;
   border-radius: 5px;
   border: solid 2px grey;
   background-color: #fff;
@@ -13,18 +16,26 @@
 }
 .form__button {
   width: 100px;
-  height: 32px;
+  height: 30px;
   border-radius: 5px;
   border: solid 2px grey;
   background-color: lightgrey;
   font-family: $font-main;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
 }
-.container__series-list {
+.container {
   display: flex;
 }
-.fav__container {
+.fav__wrapper {
+  background-color: #fff;
+  width: 250px;
+  height: auto;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid #b0318c;
   margin-right: 50px;
 }
 .favourites {
@@ -58,10 +69,15 @@
   padding: 15px;
   margin-bottom: 15px;
 }
-.pics {
+.img {
   width: 150px;
-  height: 200px;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 10px;
+}
+.page__footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  padding: 1rem;
+  color: #000;
 }
