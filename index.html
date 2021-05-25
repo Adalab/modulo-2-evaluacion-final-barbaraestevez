@@ -4,36 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./CSS/main.css" />
     <title>Evaluación Final Módulo 2</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1 class="title">Buscador de Series</h1>
     </header>
-    <form action="#" class="form js-form">
-        <input
-          class="form__search js-search"
-          type="text"
-          placeholder="busca una serie..."
-        />
-        <input class="form__button js-button" type="button" value="Buscar" />
-    </form>
-    <div class="container">
-        <div class="fav__wrapper">
-            <ul class="fav__list js-showFavList" >
-            </ul>
+    <main class="main">
+        <form action="#" class="form js-form">
+            <input
+              class="form__search js-search"
+              type="text"
+              placeholder="busca una serie..."
+            />
+            <input class="form__button js-button" type="button" value="Buscar" />
+        </form>
+        <div class="container">
+            <div class="fav__wrapper">
+                <h2 class="favourites">Mis series favoritas</h2>
+                <ul class="fav__list js-showFavList" >
+                    
+                </ul>
+            </div>
+            <div class="shows__wrapper">
+                <ul class="shows__list js-showsList">
+                </ul>
+            </div>
         </div>
-        <div class="shows__wrapper">
-            <ul class="shows__list js-showsList">
-            </ul>
-        </div>
-    </div>
+    </main>
+    <footer class="page__footer">
+        <small>
+          &copy; Todos los derechos reservados <a href=https://github.com/barbaraestevez>Bárbara Estévez</a></small
+        >
+      </footer>
     <script src="./JS/main.js"></script>
   </body>
-  <footer class="page__footer">
-    <small>
-      &copy; Todos los derechos reservados <a href=https://github.com/barbaraestevez>Bárbara Estévez</a></small
-    >
-  </footer>
-</html>
+  </html>
