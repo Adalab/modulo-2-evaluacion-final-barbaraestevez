@@ -5,7 +5,7 @@ const button = document.querySelector(".js-button");
 const showFavList = document.querySelector(".js-showFavList");
 const showAllList = document.querySelector(".js-showsList");
 const imageDefault = `https://via.placeholder.com/210x295/ffffff/666666/?text=TV`; // when image is null, render this.
-
+const resetAllFav = document.querySelector('.js-button-reset'); // const para borrar todos los fav
 
 let globalData = []; // from the API. Array donde guardo resultado de la búsqueda que hace fetch.
 let favShows = []; // Array de favoritos.
@@ -21,22 +21,21 @@ function getData() {
     });
 }
 
-
 button.addEventListener("click", getData);
 
 // Render List una vez que carga API o se la llama para repintar.
 function renderList() {
-    //limpia el contenido del ul para que no duplique la info
-  showAllList.innerHTML = '';
+  //limpia el contenido del ul para que no duplique la info
+  showAllList.innerHTML = "";
   // for of para recorrer el array de globalData
   for (const data of globalData) {
-      // aquí vemos si es favorita o no para añadirle o no ponerle la clase
+    // aquí vemos si es favorita o no para añadirle o no ponerle la clase
     const isFav = favShows.find((theFav) => theFav.show.id === data.show.id);
-    let favourite = '';
+    let favourite = "";
     if (isFav === undefined) {
-      favourite = '';
+      favourite = "";
     } else {
-      favourite = 'favouriteShow';
+      favourite = "favouriteShow";
     }
     // en función de si tiene img o no le añades la img default o la de la API.
     if (data.show.image === null) {
@@ -92,7 +91,7 @@ function renderShowFav() {
   showFavList.innerHTML = "";
   // recorro el array de favoritos
   for (const fav of favShows) {
-      // si la img del fav no está se carga la img default. Pinto los <li> por cada fav. else, si la img está se carga todo desde el API.
+    // si la img del fav no está se carga la img default. Pinto los <li> por cada fav. else, si la img está se carga todo desde el API.
     if (fav.show.image === null) {
       showFavList.innerHTML += `<li id="${fav.show.id}" class="fav__list-item">
       <img class="fav__image" src="${imageDefault}"/><h2 class="fav__title">${fav.show.name}</h2></li>`;
@@ -105,11 +104,21 @@ function renderShowFav() {
 
 // función que recupera los fav del localstorage y vuelve a pintar la lista de fav y la otra lista
 function showLocalStorage() {
-    favShows = JSON.parse(localStorage.getItem('fav'));
-    renderShowFav();
-    renderList();
+  favShows = JSON.parse(localStorage.getItem("fav"));
+  renderShowFav();
+  renderList();
 }
 // cuando carga la página si tengo almacenado favs (en localstorage) me llama a la función, si no, NO.
-if(localStorage.getItem('fav') !== null) {
-    showLocalStorage();
+if (localStorage.getItem("fav") !== null) {
+  showLocalStorage();
 }
+
+// reseteo la lista de favoritos de una vez y vuelvo a cargar la página como de inicio
+function handleResetFavs() {
+  favShows = [];
+  localStorage.clear();
+  renderShowFav();
+  renderList();
+}
+
+resetAllFav.addEventListener("click", handleResetFavs);

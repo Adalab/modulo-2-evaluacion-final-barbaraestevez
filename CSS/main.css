@@ -57,6 +57,19 @@ ul {
   font-weight: 500;
   font-size: 14px;
 }
+.button-reset {
+  width: 120px;
+  height: 25px;
+  border-radius: 5px;
+  border: solid 2px #a4e8e9;
+  background-color: #a4e8e9;
+  color: #027779;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.50);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  margin-right: 15px;
+}
 .container {
   display: flex;
 }
@@ -81,7 +94,7 @@ ul {
 .favourites {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 15px;
   margin: 0;
 }
@@ -161,4 +174,5 @@ ul {
 .favouriteShow {
   background-color: #029294;
   font-weight: 900;
+  color: #fff; /*NEW Added*/
 }
